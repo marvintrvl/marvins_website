@@ -8,8 +8,11 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link href="{% static 'css/lightbox.css' %}" rel="stylesheet"/>
     <script src="{% static 'js/lightbox-plus-jquery.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/aos.css'%}" />
     <title>{% block title %}Photography Website{% endblock %}</title>
+    <script src="{% static 'js/aos.js'%}"></script>
 </head>
+
 <body class="bg-gray-900 min-h-screen min-w-full">
 <header class="header">
     <nav class="bg-gray-800 text-white">
@@ -78,7 +81,10 @@
         <i class="fab fa-instagram text-4xl text-gray-400"></i>
     </a>
 </footer>
+
 <script>
+// AOS Initialization
+AOS.init();
 // Mobile Menu
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
