@@ -66,15 +66,14 @@
         </div>
     </nav>
 </header>
-<!-- Main Content -->
+
 <main class="bg-gray-700">
     <div class="mx-auto bg-gray-700 text-white">
         {% block content %}
-        <!-- Main Content of Each Page -->
         {% endblock %}
     </div>
 </main>
-<!-- Footer -->
+
 <footer class="py-4 bg-gray-800 text-white text-center mt-auto">
     <p class="mb-2">Follow me on Instagram:</p>
     <a href="https://instagram.com/marvin.trvl" class="text-blue-500">
@@ -83,9 +82,9 @@
 </footer>
 
 <script>
-// AOS Initialization
+
 AOS.init();
-// Mobile Menu
+
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -95,18 +94,18 @@ mobileMenuButton.addEventListener('click', () => {
     mobileMenuButton.querySelector('svg:last-child').classList.toggle('hidden', isHidden);
 });
 
-// Subcategory Dropdowns for Desktop
+
 const desktopCategoryButtons = document.querySelectorAll('.category-button');
 
 desktopCategoryButtons.forEach(button => {
     button.addEventListener('click', (event) => {
         if (window.innerWidth >= 768) {
-            event.preventDefault(); // Prevent default behavior for click events
+            event.preventDefault();
         }
     });
 });
 
-// Subcategory Dropdowns for Mobile
+
 const categoryButtons = document.querySelectorAll('.category-button');
 const dropdowns = document.querySelectorAll('.touch-dropdown');
 
@@ -114,14 +113,14 @@ categoryButtons.forEach(button => {
     button.addEventListener('click', () => {
         const dropdown = button.nextElementSibling;
 
-        // Close all other open dropdowns
+        
         dropdowns.forEach(openDropdown => {
             if (openDropdown !== dropdown) {
                 openDropdown.classList.remove('active');
             }
         });
 
-        // Toggle the clicked dropdown
+        
         dropdown.classList.toggle('active');
     });
 });
